@@ -23,4 +23,5 @@
     'dtpr.profile',
     'dtpr.trips',
     'dtpr.newtrip',
+    'google-maps',
 ])));

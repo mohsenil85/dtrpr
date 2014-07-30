@@ -18,9 +18,18 @@
         var init = function() {
         };
 
+        $scope.map = {
+            center: {
+                latitude: 44,
+                longitude: 100
+            },
+            zoom : 8
+        };
+
         init();
     }]);
 
 }(angular.module("dtpr.newtrip", [
-    'ui.router'
+    'ui.router',
+    'google-maps'
 ])));
