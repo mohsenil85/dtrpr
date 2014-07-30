@@ -18,7 +18,7 @@
         var init = function() {
 
         };
-        $scope.year = "2014";
+        $scope.year = new Date().getFullYear();
         $scope.author = "lm";
 
         init();
