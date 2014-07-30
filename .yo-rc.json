@@ -1,0 +1,6 @@
+{
+  "generator-ngbp": {
+    "projectName": "dtpr",
+    "useCoffeescript": false
+  }
+}
