@@ -39,8 +39,8 @@
             //  writing any code outside of this function that executes immediately.
         };
 
-        $scope.someVar = 'blue';
-        $scope.someList = ['one', 'two', 'three'];
+        $scope.someVar = 'Things for Logan to do:';
+        $scope.someList = ['reimpl local login', 'fb login', 'google login', 'google maps api', 'file upload (pix)', 'map stylings', 'combine backend and front end?', 'migrate logos and stuff into assets'];
         $scope.someFunctionUsedByTheHomePage = function () {
             alert('Congratulations');
         };
