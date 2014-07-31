@@ -34,20 +34,10 @@
     }]);
 
 
-    app.factory('authService', function($http){
-      return {
-        login: function(credentials){
-          return $http.post('http://localhost:7000/api/auth', credentials);
-        },
-        logout: function(){
-          return $http.delete('http://localhost:7000/api/auth');
-        }
-      };
-    });
 
 }(angular.module("dtpr.login", [
-    'ui.router'
-    //'dtpr.login.authService'
+    'ui.router',
+    //'authService'
 ])));
 
 

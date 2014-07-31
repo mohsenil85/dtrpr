@@ -4,7 +4,23 @@
         $urlRouterProvider.otherwise('/home');
     }]);
 
-    app.run(function () {});
+    app.run(['$rootScope',
+              '$location',
+              'authService',
+            function ($rootScope, $location, authService ) {
+
+              var routesThatRequireAuth = ['/profile', '/trips', '/newTrip'];
+              $rootScope.$on('$stateChangeStart', function(toState, 
+                                                           toParams,
+                                                           fromState,
+                                                            fromParams){
+                if(toState.authenticate &&
+                   !authService.isLoggedIn()){
+                  $location.path('/login');
+                }
+              });
+
+    }]);
 
     app.controller('AppController', ['$scope', function ($scope) {
 
@@ -20,6 +36,7 @@
     'dtpr.header',
     'dtpr.footer',
     'dtpr.login',
+    'authService',
     'dtpr.profile',
     'dtpr.trips',
     'dtpr.newtrip',

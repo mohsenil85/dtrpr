@@ -19,7 +19,7 @@
 
         };
         $scope.year = new Date().getFullYear();
-        $scope.author = "lm";
+        $scope.author = "lm & ab, inc";
 
         init();
     }]);
