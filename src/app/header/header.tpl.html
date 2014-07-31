@@ -1,46 +1,48 @@
 <header ui-view>
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">daytripr.co</a>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">daytripr.co</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <!-- public navs -->
+        <ul class="nav navbar-nav">
+          <li ui-sref-active="active">
+          <a ui-sref="home">Home</a>
+          </li>
+          <li ui-sref-active="active">
+          <a ui-sref="about">About</a>
+          </li>
+        </ul>
+
+        <!-- goes away if private navs -->
+        <ul class="nav navbar-nav" ng-hide="isLoggedIn()">
+          <li ui-sref-active="active">
+          <a ui-sref="login">Log In</a>
+        </ul>
+
+        <!-- private navs -->
+        <ul class="nav navbar-nav pull-right" ng-show="isLoggedIn()">
+          <li ui-sref-active="active">
+          <a ui-sref="login">Log Out</a>
+          <li ui-sref-active="active">
+          <a ui-sref="profile">My Profile</a>
+          </li>
+          <li ui-sref-active="active">
+          <a ui-sref="trips">My Trips</a>
+          </li>
+          <li ui-sref-active="active">
+          <a ui-sref="newtrip">New Trip</a>
+          </li>
+        </ul>
+
+      </div><!--/.navbar-collapse -->
     </div>
-    <ul class="nav navbar-nav">
-      <li ui-sref-active="active">
-      <a ui-sref="home">Home</a>
-      </li>
-      <li ui-sref-active="active">
-      <a ui-sref="about">About</a>
-      </li>
-      <li ui-sref-active="active">
-      <a ui-sref="login">Log In</a>
-      </li>
-      <li ui-sref-active="active">
-      <a ui-sref="profile">My Profile</a>
-      </li>
-      <li ui-sref-active="active">
-      <a ui-sref="trips">My Trips</a>
-      </li>
-      <li ui-sref-active="active">
-      <a ui-sref="newtrip">New Trip</a>
-      </li>
-    </ul>
-    <div class="navbar-collapse collapse">
-      <form class="navbar-form navbar-right" role="form">
-        <div class="form-group">
-          <input type="text" placeholder="Email" class="form-control">
-        </div>
-        <div class="form-group">
-          <input type="password" placeholder="Password" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-success">Sign in</button>
-      </form>
-    </div><!--/.navbar-collapse -->
   </div>
-</div>
 </header>

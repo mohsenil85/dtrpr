@@ -16,7 +16,6 @@
                                     toParams,
                                     fromState,
                                     fromParams){
-                                      console.log(toState);
                                       if(toState.authenticate &&
                                          !authService.isLoggedIn()){
                                         $location.path('/login');
@@ -26,8 +25,9 @@
 
           }]);
 
-          app.controller('AppController', ['$scope', function ($scope) {
+          app.controller('AppController', ['$scope',  function ($scope) {
 
+              
           }]);
 
 }(angular.module("dtpr", [

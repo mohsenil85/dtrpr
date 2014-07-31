@@ -7,10 +7,10 @@
     var uncacheSession = function(){
       sessionService.unset('authenticated');
     };
+    var currentUser = {};
       return {
         login: function(credentials){
           var login =  $http.post('http://localhost:7000/api/auth', credentials);
-          console.log(credentials);
           login.success(cacheSession);
           return login;
         },
@@ -20,6 +20,12 @@
         },
         isLoggedIn: function(){
           return sessionService.get('authenticated');
+        },
+        setCurrentUser: function(data){
+            currentUser = data;
+        },
+        getCurrentUser: function(){
+            return currentUser;
         }
       };
     });

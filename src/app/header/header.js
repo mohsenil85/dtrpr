@@ -13,10 +13,17 @@
         });
     }]);
 
-    app.controller('HeaderController', ['$scope', function ($scope) {
+    app.controller('HeaderController', ['$scope','authService', function ($scope, authService) {
 
         var init = function() {
         };
+
+        $scope.isLoggedIn = function(){
+            return authService.isLoggedIn();
+        };
+
+        $scope.currentUser = authService.getCurrentUser();
+          
 
 
         init();

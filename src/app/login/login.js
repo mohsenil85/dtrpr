@@ -24,11 +24,14 @@
           password : ""
         };
         $scope.login = function() {
-          authService.login($scope.credentials).success(function(){
+          authService.login($scope.credentials).success(function(data){
+              authService.setCurrentUser(data);
+
             $location.path('/profile');
           });
 
         };
+
 
         init();
     }]);

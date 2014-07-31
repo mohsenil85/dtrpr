@@ -3,7 +3,6 @@
     app.factory('sessionService', function(){
       return {
         get: function(key){
-          console.log('foo');
           return sessionStorage.getItem(key);
         },
         set: function(key, value){

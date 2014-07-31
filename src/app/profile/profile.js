@@ -14,9 +14,15 @@
         });
     }]);
 
-    app.controller('ProfileController', ['$scope', function ($scope) {
+    app.controller('ProfileController', ['$scope', 'authService', function ($scope, authService) {
 
         var init = function() {
+        };
+
+        $scope.currentUser = authService.getCurrentUser();
+
+        $scope.me = function(){
+            console.log($scope.currentUser);
         };
 
         init();
