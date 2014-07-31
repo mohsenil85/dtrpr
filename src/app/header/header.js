@@ -16,13 +16,9 @@
     app.controller('HeaderController', ['$scope', function ($scope) {
 
         var init = function() {
-            console.log(this);
         };
 
-        window.scope = $scope;
 
-        console.log('100101');
-        $scope.foo = 'foo';
         init();
     }]);
 
