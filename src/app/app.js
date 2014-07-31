@@ -31,6 +31,7 @@
           }]);
 
 }(angular.module("dtpr", [
+  'mapController',
   'dtpr.home',
   'dtpr.about',
   'templates-app',

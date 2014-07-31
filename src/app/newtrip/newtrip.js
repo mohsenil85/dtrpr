@@ -14,23 +14,32 @@
         });
     }]);
 
-    app.controller('NewtripController', ['$scope', function ($scope) {
+    app.controller('NewtripController',   ['$scope', 'mapController',  function ($scope, mapController) {
 
         var init = function() {
         };
 
-        $scope.map = {
+        $scope.map2 = {
             center: {
-                latitude: 44,
-                longitude: 100
+                latitude: 45,
+                longitude: -122
             },
             zoom : 8
         };
+
+        $scope.map1 = {
+            center: {
+                latitude: 45,
+                longitude: -122
+            },
+            zoom : 8
+        };
+
 
         init();
     }]);
 
 }(angular.module("dtpr.newtrip", [
     'ui.router',
-    'google-maps'
+    'google-maps',
 ])));
