@@ -9,7 +9,8 @@
                     templateUrl: 'newtrip/newtrip.tpl.html'
                 }
             },
-            data:{ pageTitle: 'Newtrip' }
+            data:{ pageTitle: 'Newtrip' },
+            authenticate: true
         });
     }]);
 

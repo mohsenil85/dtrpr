@@ -12,7 +12,7 @@
           var login =  $http.post('http://localhost:7000/api/auth', credentials);
           console.log(credentials);
           login.success(cacheSession);
-          //return login;
+          return login;
         },
         logout: function(){
           var logout =  $http.delete('http://localhost:7000/api/auth');

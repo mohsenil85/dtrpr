@@ -9,7 +9,8 @@
                     templateUrl: 'trips/trips.tpl.html'
                 }
             },
-            data:{ pageTitle: 'Trips' }
+            data:{ pageTitle: 'Trips' },
+            authenticate: true
         });
     }]);
 
