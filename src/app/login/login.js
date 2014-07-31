@@ -17,6 +17,9 @@
 
         var init = function() {
         };
+        $scope.login = function() {
+          console.log('foof');
+        };
 
         init();
     }]);
