@@ -76,7 +76,8 @@ module.exports = function(grunt) {
          */
         vendor_files: {
             js: [
-                'http://maps.googleapis.com/maps/api/js?sensor=false&language=en', 
+              'http://maps.googleapis.com/maps/api/js?key=AIzaSyDDqU4AMBJ5-ZL4OSyYv9YxOkmxcPlSiB8&v=3&libraries=places',
+                //'http://maps.googleapis.com/maps/api/js?sensor=false&language=en', 
                 'vendor/angular/angular.js',
                 'vendor/angular-resource/angular-resource.js',
                 'vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',

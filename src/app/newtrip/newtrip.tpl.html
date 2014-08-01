@@ -6,17 +6,32 @@
     <div class="col-md-6">
 
         <label class="control-label" for="textinput">To:</label>  
-        <input id="Destination" name="Destination" placeholder="Destination" class="form-control input-md" type="text">
+        <input id="destination" 
+              name="destination" 
+              placeholder="Destination" 
+              class="form-control input-md" 
+              ng-model="destinationInput"
+              type="text">
         <br>
-        <google-map center="map1.center" zoom="map1.zoom"></google-map>
+        <google-map center="map1.center" 
+                            zoom="map1.zoom" 
+                            options="options"></google-map>
     </div> <!-- end col -->
 
     <div class="col-md-6">
         <label class=" control-label" for="textinput">From:</label>  
-        <input id="Origin" name="Origin" placeholder="Origin" class="form-control input-md" type="text">
+        <input id="origin" 
+              name="origin" 
+              placeholder="Origin" 
+              class="form-control input-md" 
+              type="text">
         <br>
-        <google-map center="map2.center" zoom="map2.zoom"></google-map>
+        <google-map center="map2.center" 
+                    zoom="map2.zoom"
+                    options="options"
+                    ></google-map>
     </div> <!-- end col -->
+
 
   </div> <!--end row -->
 </div> <!-- end container -->
