@@ -19,8 +19,8 @@
     'mapController',
     '$window',
     '$q',
-    'searchBox',
-    function ($scope, mapController, $window, $q, searchBox ) {
+    //'searchBox',
+    function ($scope, mapController, $window, $q ) {
 
       var flatStyle = 
         [
