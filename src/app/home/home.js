@@ -40,7 +40,7 @@
         };
 
         $scope.someVar = 'Things for Logan to do:';
-        $scope.someList = [' √ reimpl local login', 'fb login', 'google login', 'google maps api', 'file upload (pix)', 'map stylings', 'combine backend and front end?', 'migrate logos and stuff into assets'];
+        $scope.someList = [' √ reimpl local login', 'fb login', 'google login', '√ google maps api', 'link search box to map',  'file upload (pix)  possible just have link to pic?', ' √ ap stylings', 'combine backend and front end?', 'migrate logos and stuff into assets'];
         $scope.someFunctionUsedByTheHomePage = function () {
             alert('Congratulations');
         };
