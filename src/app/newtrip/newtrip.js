@@ -66,4 +66,5 @@
   'ui.router',
   'google-maps',
   'mapStyle',
+  'ngAutocomplete',
 ])));
