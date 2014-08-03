@@ -18,8 +18,9 @@
     '$scope', 
     '$window',
     '$q',
+    '$timeout',
     'mapStyle',
-    function ($scope,  $window, $q,  mapStyle) {
+    function ($scope,  $window, $q, $timeout,  mapStyle) {
 
 
       var init = function() {
@@ -51,18 +52,27 @@
       $scope.destinationInput= "";
       $scope.inputOptions = {
       };
-        
-      $scope.getCoordsFromInput = function(){
-          var val = document.getElementById('myInput').value;
-          console.log(val);
-      };
       
-      $scope.logChanges = function(event){
-        event.preventDefault();
-        console.log('ffbar');
-      };
+      $scope.destCoords = {};
+      $scope.getInput = function(){
+        $timeout(function(){
+          
+          $scope.destCoords.latitude =  $scope.destLatLong.k;
+          $scope.destCoords.longitude = $scope.destLatLong.B;
+          console.log($scope.destCoords);
 
-      scope.destLatLong = "";
+        },60);
+      };
+      /*
+
+      $scope.newMarker = function(place){
+        var marker = new google.maps.Marker({
+          map: $scope.map2,
+          position: place
+        }) ;
+      };
+   */
+      $scope.destLatLong = "";
 
 
       init();
