@@ -16,11 +16,10 @@
 
   app.controller('NewtripController', [
     '$scope', 
-    'mapController',
     '$window',
     '$q',
     'mapStyle',
-    function ($scope, mapController, $window, $q, mapStyle ) {
+    function ($scope,  $window, $q, mapStyle ) {
 
 
       var init = function() {
