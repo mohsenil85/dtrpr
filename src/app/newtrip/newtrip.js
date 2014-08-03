@@ -19,7 +19,7 @@
     '$window',
     '$q',
     'mapStyle',
-    function ($scope,  $window, $q, mapStyle ) {
+    function ($scope,  $window, $q,  mapStyle) {
 
 
       var init = function() {
@@ -34,7 +34,7 @@
         $scope.map2.center.longitude = data.coords.longitude;
       });
 
-      $scope.options = {
+      $scope.mapOptions = {
         disableDefaultUI: true,
         styles: mapStyle
       };
@@ -48,15 +48,22 @@
 
       window.scope = $scope;
 
-      $scope.map1 = {
-        center: {
-          latitude: 0,
-          longitude: 0
-        },
-        zoom : 8
+      $scope.destinationInput= "";
+      $scope.inputOptions = {
+      };
+        
+      $scope.getCoordsFromInput = function(){
+          var val = document.getElementById('myInput').value;
+          console.log(val);
+      };
+      
+      $scope.logChanges = function(event){
+        event.preventDefault();
+        console.log('ffbar');
       };
 
-      $scope.destinationInput= "";
+      scope.destLatLong = "";
+
 
       init();
     }]);

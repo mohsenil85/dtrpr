@@ -7,15 +7,18 @@
 
         <label class="control-label" for="textinput">To:</label>  
 
+        <form ng-submit="getCoordsFromInput()">
         <input id="destination" 
               name="destination" 
               ng-autocomplete 
-              details="details"
+              details="destination.details"
               options="options" 
               placeholder="Destination" 
               class="form-control input-md" 
               ng-model="destinationInput"
+              ng-submit="getCoordsFromInput()"
               type="text">
+        </form>
         <br>
         <label class=" control-label" for="textinput">From:</label>  
         <input id="origin" 
@@ -33,10 +36,10 @@
         <br>
         <google-map center="map2.center" 
                     zoom="map2.zoom"
-                    options="options"
+                    options="mapOptions"
                     ></google-map>
     </div> <!-- end col -->
-
+    <input id="myInput" type="text" value=" {{destination.details.geometry.location}} ">
 
   </div> <!--end row -->
 </div> <!-- end container -->
