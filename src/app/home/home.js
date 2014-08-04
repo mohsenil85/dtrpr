@@ -20,7 +20,6 @@
                     templateUrl: 'home/home.tpl.html'
                 },
                 "header": {
-                    controller: function(){console.log('header');},
                     templateUrl: 'header/header.tpl.html'
 
                 }
@@ -40,7 +39,24 @@
         };
 
         $scope.someVar = 'Things for Logan to do:';
-        $scope.someList = [' √ reimpl local login', 'fb login', 'google login', '√ google maps api', '√  link search box to map','make map expand to contian both markers', 'add uspport for google directions',  'file upload (pix)  possible just have link to pic?', ' √ ap stylings', 'combine backend and front end?', 'migrate logos and stuff into assets'];
+        $scope.someList = [
+            ' √ reimpl local login', 
+            'fb login',
+            'google login',
+            '√ google maps api',
+            '√  link search box to map',
+            'make map expand to contian both markers',
+            'add uspport for google directions',
+            ' X file upload (pix)',
+            ' possible just have link to pic?',
+            ' √ ap stylings',
+            'x combine backend and front end?',
+            'migrate logos and stuff into assets',
+            'create new trip from ui,
+            save into db',
+            'user profile',
+            'list all trips, filter them'
+        ];
         $scope.someFunctionUsedByTheHomePage = function () {
             alert('Congratulations');
         };
