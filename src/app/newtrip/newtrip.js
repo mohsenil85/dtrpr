@@ -22,7 +22,7 @@
     'mapStyle',
     function ($scope,  $window, $q, $timeout,  mapStyle) {
 
-
+      $scope.icon="../../assets/img/shitty.png";
       var init = function() {
       };
       var defered = $q.defer();
@@ -52,27 +52,27 @@
       $scope.destinationInput= "";
       $scope.inputOptions = {
       };
+      $scope.origCoords = {};
+      $scope.origInput = function(){
+        $timeout(function(){
+          
+          $scope.origCoords.latitude =  $scope.origLatLong.k;
+          $scope.origCoords.longitude = $scope.origLatLong.B;
+
+        },60);
+      };
       
       $scope.destCoords = {};
-      $scope.getInput = function(){
+      $scope.destInput = function(){
         $timeout(function(){
           
           $scope.destCoords.latitude =  $scope.destLatLong.k;
           $scope.destCoords.longitude = $scope.destLatLong.B;
-          console.log($scope.destCoords);
 
         },60);
       };
-      /*
-
-      $scope.newMarker = function(place){
-        var marker = new google.maps.Marker({
-          map: $scope.map2,
-          position: place
-        }) ;
-      };
-   */
       $scope.destLatLong = "";
+      $scope.origLatLong = "";
 
 
       init();
