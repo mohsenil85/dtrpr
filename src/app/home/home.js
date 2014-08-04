@@ -55,6 +55,8 @@
             'create new trip from ui,
             save into db',
             'user profile',
+            'save user into db',
+            'user add/edit screen',
             'list all trips, filter them'
         ];
         $scope.someFunctionUsedByTheHomePage = function () {
