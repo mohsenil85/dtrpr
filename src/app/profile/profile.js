@@ -14,12 +14,21 @@
         });
     }]);
 
-    app.controller('ProfileController', ['$scope', 'authService', function ($scope, authService) {
+    app.controller('ProfileController',  ['$scope', '$location', 'authService', 
+                   function ($scope, $location, authService) {
 
         var init = function() {
+            if (authService.isLoggedIn()){
+                console.log('notLoggedIn');
+            }
         };
+    
 
+        window.scope = $scope;
+
+        console.log(authService.isLoggedIn());
         $scope.currentUser = authService.getCurrentUser();
+        
 
         $scope.me = function(){
             console.log($scope.currentUser);
@@ -29,5 +38,5 @@
     }]);
 
 }(angular.module("dtpr.profile", [
-    'ui.router'
+    'ui.router',
 ])));
