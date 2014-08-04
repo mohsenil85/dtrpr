@@ -46,4 +46,5 @@
   'dtpr.trips',
   'dtpr.newtrip',
   'google-maps',
+  'dtpr.howitworks',
 ])));
