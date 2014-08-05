@@ -13,27 +13,19 @@
       <div class="navbar-collapse collapse">
         <!-- public navs -->
         <ul class="nav navbar-nav">
-          <li ui-sref-active="active">
-          <a ui-sref="home">Home</a>
-          </li>
-          <li ui-sref-active="active">
-          <a ui-sref="about">About</a>
-          </li>
-          <li ui-sref-active="active">
-          <a ui-sref="howitworks">How It Works</a>
-          </li>
         </ul>
 
         <!-- goes away if private navs -->
         <ul class="nav navbar-nav" ng-hide="isLoggedIn()">
+          <li ui-sref-active="active">
+          <a ui-sref="howitworks">How It Works</a>
+          </li>
           <li ui-sref-active="active">
           <a ui-sref="login">Log In</a>
         </ul>
 
         <!-- private navs -->
         <ul class="nav navbar-nav pull-right" ng-show="isLoggedIn()">
-          <li ui-sref-active="active">
-          <a ui-sref="login">Log Out</a>
           <li ui-sref-active="active">
           <a ui-sref="profile">My Profile</a>
           </li>
@@ -42,6 +34,8 @@
           </li>
           <li ui-sref-active="active">
           <a ui-sref="newtrip">New Trip</a>
+          <li ui-sref-active="active">
+          <a ui-sref="home" ng-click="logout()">Log Out</a>
           </li>
         </ul>
 

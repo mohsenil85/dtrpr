@@ -23,6 +23,10 @@
         };
 
         $scope.currentUser = authService.getCurrentUser();
+
+        $scope.logout = function(){
+          authService.logout();
+        };
           
 
 

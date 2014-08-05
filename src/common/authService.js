@@ -1,8 +1,8 @@
 (function(app) {
 
     app.factory('authService', function($http, sessionService ){
-    var cacheSession = function(){
-      sessionService.set('authenticated', true);
+    var cacheSession = function(data){
+      sessionService.set('authenticated', data);
     };
     var uncacheSession = function(){
       sessionService.unset('authenticated');
@@ -11,7 +11,11 @@
       return {
         login: function(credentials){
           var login =  $http.post('http://localhost:7000/api/auth', credentials);
-          login.success(cacheSession);
+          login.success(function(data){
+            cacheSession(data);
+            console.log(data);
+          });
+
           return login;
         },
         logout: function(){
