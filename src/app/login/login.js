@@ -22,6 +22,9 @@
                    'authService', 
                    function ($scope, $location, authService) {
 
+        window.scope = $scope;
+
+
         var init = function() {
         };
         $scope.credentials = {
@@ -45,24 +48,31 @@
       '$scope', '$http', '$location', 'authService', 
       function($scope, $http, $location, authService){
       window.scope = $scope;
-      $scope.newUser =  {
+      $scope.credentials =  {
         username: "",
         email: "",
         password :"",
         userPic : ""
       };
       $scope.createNewUser =  function() {
-        console.log($scope.newUser);
-        $http.post('http://localhost:7000/api/users', $scope.newUser)
-        //todo, propaate an error to the UI when the user tries to register a 
-        //non -unique name
+          console.log($scope.credentials);
+          $http.post('http://localhost:7000/api/users', $scope.credentials)
+          //todo, propaate an error to the UI when the user tries to register a 
+          //non -unique name
           .error(function(err){
-            console.log(err);
+              console.log(err);
           })
           .success(function(data){
-            console.log(data);
-            $location.path('/profile');
-            
+              console.log(data);
+              authService.login($scope.credentials).success(function(data){
+                  console.log(data);
+                  console.log(JSON.stringify(data));
+
+                  authService.setCurrentUser(data);
+
+                  $location.path('/profile');
+              });
+
           });
 
       };

@@ -9,7 +9,7 @@
               <input type="text" 
               class="form-control" 
               id="username"
-              ng-model="newUser.username"
+              ng-model="credentials.username"
               required
               autofocus
               placeholder="Username">
@@ -21,7 +21,7 @@
               <input type="email" 
               class="form-control" 
               id="email"
-              ng-model="newUser.email"
+              ng-model="credentials.email"
               required
               autofocus
               placeholder="Email">
@@ -33,7 +33,7 @@
               <input type="password" 
               class="form-control" 
               id="password"
-              ng-model="newUser.password"
+              ng-model="credentials.password"
               required
               placeholder="Password">
             </div>
@@ -46,7 +46,7 @@
               pattern="https?://.+"
               class="form-control" 
               id="userPic"
-              ng-model="newUser.userPic"
+              ng-model="credentials.userPic"
               required
               placeholder="Paste Url to Your user pic here">
             </div>
