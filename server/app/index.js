@@ -1,9 +1,8 @@
 var express = require('express');
-var expose = require('express-expose');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-var session = require('cookie-session');
+//var session = require('cookie-session');
 var passport = require('passport');
 
 var router = require('./routes/mainRouter');
@@ -21,11 +20,11 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.use(session({
-  secret: "lol",
-  resave: true,
-  saveUninitialized: true
-}));
+//app.use(session({
+//  secret: "lol",
+//  resave: true,
+//  saveUninitialized: true
+//}));
 app.use(passport.initialize());
 app.use(passport.session());
 
