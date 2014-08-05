@@ -57,8 +57,16 @@ bower_components
 .sass-cache
 node_modules
 vendor
-db/mongodb*
-db/mongodb/*
+server/db/mongodb*
+server/db/mongodb/*
 
 dist
 *.log
+
+
+/server/db/api.0
+/server/db/api.ns
+/server/db/journal/
+/server/db/local.0
+/server/db/local.ns
+/server/db/mongod.lock
