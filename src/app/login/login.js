@@ -46,18 +46,22 @@
       function($scope, $http, $location, authService){
       window.scope = $scope;
       $scope.newUser =  {
-        name: "",
+        username: "",
         email: "",
         password :"",
-        picture : ""
+        userPic : ""
       };
       $scope.createNewUser =  function() {
+        console.log($scope.newUser);
         $http.post('http://localhost:7000/api/users', $scope.newUser)
+        //todo, propaate an error to the UI when the user tries to register a 
+        //non -unique name
+          .error(function(err){
+            console.log(err);
+          })
           .success(function(data){
             console.log(data);
-
-
-            //$location.path('/profile');
+            $location.path('/profile');
             
           });
 
