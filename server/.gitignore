@@ -1,16 +1,3 @@
-node_modules/
-bower_components/
-vendor/
-*.log
-*.swp
-
-build/
-dist/
-bin/
-
-server/node_modules
-
-
 # Useful `.gitignore` templates:
 # - https://github.com/github/gitignore
 
